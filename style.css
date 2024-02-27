@@ -1,0 +1,280 @@
+* {
+  font-family: 'Gabarito', sans-serif;
+}
+
+body {
+  position: relative;
+  overflow-y: hidden;
+}
+
+/* BEGIN SIDEBAR */
+.side-bar {
+  height:100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(201, 181, 243);
+  border-right: solid purple 1px;
+}
+
+.side-bar button {
+  color:purple;
+  background-color: rgb(201, 181, 243);
+  border: none;
+  border-bottom: purple solid 1px;
+  display:block;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 10px;
+}
+
+
+.side-bar button:hover {
+  color: #f1f1f1;
+  background-color: rgb(137, 82, 255);
+  border:none;
+  border-bottom: purple solid 1px;
+}
+
+.main-page {
+  margin-left: 200px;
+  padding: 0 15px;
+}
+
+#title {
+  font-size: 40px;
+}
+
+/* BEGIN CARD */
+.main-card {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: 375px;
+  border: solid grey 1px;
+  box-shadow: 1px 1px 3px grey;
+  margin: 15px;
+  font-size: 30px;
+}
+
+.card-top, .card-bottom {
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  padding: 5px;
+}
+
+#card-text {
+  float: right;
+  text-align: center;
+  inline-size: 80%;
+  overflow-wrap: break-word;
+  margin: auto;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#star:hover, #edit:hover  {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+#star, #edit {
+  font-size: 35px;
+}
+
+#edit {
+  margin-right: 5px;
+}
+
+.material-symbols-outlined:hover, 
+.main-card .card:hover, 
+button:hover, #close-button {
+  cursor:pointer;
+}
+
+.action-buttons {
+  display: flex;
+  width: 550px;
+  padding-left: 50px;
+  padding-right: 40px;
+  justify-content: space-between;
+}
+
+.action-buttons button {
+  font-size: 20px;
+  border: white 1px solid;
+  padding: 10px;
+  color: #f1f1f1;
+  background-color: rgb(171, 106, 245);
+}
+
+.action-buttons button:hover {
+  color: #000000;
+  background-color: rgb(171, 106, 245);
+  border: solid rgb(171, 106, 245) 1px;
+  border-radius: 2px;
+}
+
+.flashcard {
+  display: flex;
+  justify-content: center;
+}
+
+.dark-mode {
+  color: #fff;
+  background-color: #141421;
+}
+
+
+/*BEGIN POPUP*/
+#popup {
+  width: 60%;
+  height: 85%;
+  background-color: #fff;
+  padding: 20px;
+  border: solid grey 1px;
+  box-shadow: 1px 1px 3px grey;
+  position: fixed;
+  top: 5%;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  gap:15px;
+  overflow: auto;
+}
+
+#add-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1px;
+  gap:15px;
+  overflow: auto;
+}
+
+#close-button {
+  display: flex;
+  justify-content: end;
+}
+
+
+.fullscreen-container {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(90, 90, 90, 0.5);
+  z-index: 2;
+}
+
+/* BEGIN ADD CARD SCREEN */
+.input-block-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.sub-block {
+  min-height: 100px;
+  width: calc(50% - 25px);
+  border-radius: 10px;
+  border: solid 2px black;
+  display:flex;
+  align-items: center;
+
+  padding: 10px;
+  justify-content: space-between;
+  gap: 1em;
+
+}
+
+.image {
+  padding-top: 5px;
+  font-size: 30px;
+}
+
+
+
+.input-text-box {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  resize: vertical;
+  min-height: 20px;
+  line-height: 20px;
+  border-bottom: #707070 solid;
+  resize: none;
+}
+
+#add-card {
+  height: 30px;
+  font-size: 18px;
+}
+
+.exit-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+#cancel-button, #confirm-button{
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  color: white;
+  font-size: 18px;
+}
+#cancel-button:hover {
+  background-color: rgb(223, 26, 26);
+}
+#confirm-button:hover {
+  background-color: rgb(114, 124, 211);
+}
+
+#cancel-button {
+  background-color: red;
+  width: 70px;
+}
+#confirm-button {
+  background-color: rgb(114, 128, 255);
+  width: 80px;
+}
+
+#set-name-input {
+  border: none;
+  height: 20px;
+  font-size: 20px;
+}
+
+/*
+{ card obj
+  favorite: bool,
+  set: string,
+  ID: int,
+  frontside: text or pic,
+  backside: text or pic
+}*/
